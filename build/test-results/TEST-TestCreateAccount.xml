@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestCreateAccount" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="Manish.local" time="0.0">
+  <properties/>
+  <system-out><![CDATA[Connection refused (Connection refused)
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'Manish.local', ip: 'fe80:0:0:0:1a:ebc8:4ee2:d7d0%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.5', java.version: '1.8.0_152-release'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

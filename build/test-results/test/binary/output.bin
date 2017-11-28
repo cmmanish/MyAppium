@@ -1,0 +1,4 @@
+ÀAn unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device. (WARNING: The server did not provide any stacktrace information)
++Command duration or timeout: 22.37 seconds
+UBuild info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+¤System info: host: 'Manish.local', ip: 'fe80:0:0:0:1a:ebc8:4ee2:d7d0%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.5', java.version: '1.8.0_152'
