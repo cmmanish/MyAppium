@@ -12,6 +12,7 @@ import java.util.logging.Logger;
 
 import Screens.WelcomeScreen;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 
 import static junit.framework.TestCase.assertTrue;
 
@@ -22,25 +23,25 @@ import static junit.framework.TestCase.assertTrue;
 public class TestCreateAccount {
 
     final private static Logger log = Logger.getLogger(String.valueOf(WelcomeScreen.class));
-    private AppiumDriver driver;
+    private AndroidDriver driver;
 
     @Before
     public void setUp() throws Exception {
 
-        String APP_PACKAGE = "com.tactile.tact";
-        String APP_ACTIVITY = "com.tactile.tact.activities.MainActivity";
+        String APP_PACKAGE = "com.GoFundMe.GoFundMe.stage.debug";
+        String APP_ACTIVITY = "com.GoFundMe.GoFundMe.ia_ui.main.MainActivity";
         File classpathRoot = new File(System.getProperty("user.dir"));
         File appDir = new File(classpathRoot, "APK");
-        File app = new File(appDir, "TactApplication-automationTest-release.apk");
+        File app = new File(appDir, "mobile-stage-debug.apk");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("deviceName", "Android");
         capabilities.setCapability("app", app.getAbsolutePath());
         capabilities.setCapability("deviceName", "emulator-5554");
-        capabilities.setCapability("apppackage", APP_PACKAGE);
-        capabilities.setCapability("appactivity", APP_ACTIVITY);
+        capabilities.setCapability("appPackage", APP_PACKAGE);
+        capabilities.setCapability("appActivity", APP_ACTIVITY);
         try {
-            driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+            driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             log.info("App Launched");
 
@@ -62,6 +63,7 @@ public class TestCreateAccount {
     public void testCreateAccount() throws Exception {
 
         log.info("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< End");
+
         WelcomeScreen welcomeScreen = new WelcomeScreen(driver);
 
 //        assertTrue(welcomeScreen.isWelcomeScreenPresent());
